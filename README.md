@@ -9,10 +9,10 @@ Link to project [requirements](https://docviewer.yandex.ru/view/0/?*=CCId7kvZ7qg
 
 ## Commit requirements
 * Do coding in a separate branch. Please follow `feature/[branch_name]` name convention.
-  There are following features:
-  * feat (means adding a new feature)
-  * fix (bug fixing)
-  * refactor (refactor smth for improve smth)
+  There are following `features`:
+  * `feat` (means adding a new feature)
+  * `fix` (bug fixing)
+  * `refactor` (refactor smth for improve smth)
 * `[branch_name]` should be the same as wiki task name
 * Commit message should be as follow: 
   `feature(angular_feature_module_list): short describing main changes(wiki_task_name)`
