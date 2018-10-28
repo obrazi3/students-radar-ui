@@ -9,7 +9,7 @@ Link to project [requirements](https://docviewer.yandex.ru/view/0/?*=CCId7kvZ7qg
 
 ## Commit requirements
 * Do coding in a separate branch. Please follow `feature/[branch_name]` name convention.
-  There are following `features`:
+* There are following `features`:
   * `feat` (means adding a new feature)
   * `fix` (bug fixing)
   * `refactor` (refactor smth for improve smth)
