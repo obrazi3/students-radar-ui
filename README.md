@@ -5,9 +5,7 @@ Link to project [requirements](https://docviewer.yandex.ru/view/0/?*=CCId7kvZ7qg
 ## Dev requirements
 * Install [**Prettier**](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) for **VS Code**
 * Install [**EditorConfig**](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig) for **VS Code**
-* If you do not want to add a new module, use ```javascript
-npm ci
-```
+* If you do not want to add a new module, use ```npm ci``` instead ```npm i```
 
 ## Commit requirements
 * Please don't commit **.vscode settings.json** changes
