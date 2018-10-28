@@ -14,5 +14,6 @@ Link to project [requirements](https://docviewer.yandex.ru/view/0/?*=CCId7kvZ7qg
   * fix (bug fixing)
   * refactor (refactor smth for improve smth)
 * `[branch_name]` should be the same as wiki task name
-* Commit message should be as follow: `feature(angular_feature_module_list): short describing main changes(wiki_task_name)`
+* Commit message should be as follow: 
+  `feature(angular_feature_module_list): short describing main changes(wiki_task_name)`
 * Please don't commit **.vscode settings.json** changes
