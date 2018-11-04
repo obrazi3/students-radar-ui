@@ -9,6 +9,7 @@ header {
         .bashboard {
             height: $normal-header-height;
             border-bottom: solid px-to-rem(3px) $gray-dark-color;
+            box-sizing: border-box;
             cursor: pointer;
 
             .dashboard-title {
