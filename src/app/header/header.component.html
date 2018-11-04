@@ -1,0 +1,13 @@
+<header>
+    <nav>
+        <a
+            *ngFor="let dashBoard of navDashboards"
+            class="bashboard"
+            [routerLink]="[dashBoard.route]"
+            [routerLinkActive]="['active']"
+            (click)="onDashboardClick(dashBoard.entityType)"
+        >
+            <span class="dashboard-title">{{ dashBoard.title }}</span>
+        </a>
+    </nav>
+</header>

@@ -1,0 +1,1 @@
+export { navigationDashboards } from './models';

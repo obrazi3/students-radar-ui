@@ -1,0 +1,14 @@
+// colors
+$gray-dark-color-hover: #3c3b3d;
+$gray-dark-color: #464547;
+$white-color: #fff;
+$blue-color: #39c2d7;
+
+$base-font-size: 16px;
+
+// its allows to add 'resize' feature so need to always use this
+@function px-to-rem($px) {
+    @return $px / $base-font-size * 1rem;
+}
+
+$normal-header-height: px-to-rem(60px);

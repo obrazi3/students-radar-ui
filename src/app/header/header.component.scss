@@ -1,0 +1,42 @@
+@import '../../theme/core-variables.scss';
+
+header {
+    background-color: $gray-dark-color;
+
+    nav {
+        display: flex;
+
+        .bashboard {
+            height: $normal-header-height;
+            border-bottom: solid px-to-rem(3px) $gray-dark-color;
+            cursor: pointer;
+
+            .dashboard-title {
+                display: inline-block;
+                font-size: px-to-rem(16px);
+                letter-spacing: .4px;
+                line-height: $normal-header-height;
+                padding: 0 px-to-rem(24px);
+                color: $white-color;
+            }
+
+            &:hover {
+                background-color: $gray-dark-color-hover;
+                border-bottom: solid px-to-rem(3px) $gray-dark-color-hover;
+            }
+
+            &.active {
+                background-color: $gray-dark-color-hover;
+                border-bottom: solid px-to-rem(3px) $blue-color;
+
+                .dashboard-title {
+                    color: $blue-color;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+            }
+        }
+    }
+}
