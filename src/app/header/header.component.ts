@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+import { Store } from '@ngrx/store';
 
-import { navigationDashboards } from './services';
+import { AppState, AppStateFields } from '../store';
+import { navigationDashboards } from './header.models';
 import { EntityType } from '../dto';
+import { SetActiveDashboard } from './header.actions';
 
 @Component({
     selector: 'sr-header',
@@ -10,11 +13,13 @@ import { EntityType } from '../dto';
 })
 export class HeaderComponent {
     public navDashboards = navigationDashboards;
-    public activeDashboard = EntityType.Students;
+    public activeDashboard: EntityType;
+
+    constructor(private store: Store<AppState>) {
+        this.store.select(AppStateFields.Header).subscribe(state => (this.activeDashboard = state.activeDashboard));
+    }
 
     public onDashboardClick(clickedDashboard: EntityType) {
-        if (this.activeDashboard !== clickedDashboard) {
-            this.activeDashboard = clickedDashboard;
-        }
+        this.store.dispatch(new SetActiveDashboard(clickedDashboard));
     }
 }

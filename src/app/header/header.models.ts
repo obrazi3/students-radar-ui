@@ -1,4 +1,4 @@
-import { EntityType } from '../../dto';
+import { EntityType } from '../dto';
 
 interface NavigationDashboard {
     title: string;
@@ -14,3 +14,7 @@ export const navigationDashboards: NavigationDashboard[] = [
     { title: 'GROUPS', route: 'groups', entityType: EntityType.Groups },
     { title: 'ADMIN', route: 'admin', entityType: EntityType.Admin },
 ];
+
+export interface HeaderState {
+    activeDashboard: EntityType;
+}

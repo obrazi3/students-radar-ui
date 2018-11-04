@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { StudentsPageComponent } from './students.component';
-import { StudentsCardComponent } from './components/students-card';
 import { StudentsPageRoutingModule } from './students-routing.module';
+import { StudentsCardComponent } from './components';
 
 @NgModule({
     imports: [CommonModule, StudentsPageRoutingModule],

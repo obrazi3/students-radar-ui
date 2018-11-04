@@ -1,1 +1,0 @@
-export { navigationDashboards } from './models';
