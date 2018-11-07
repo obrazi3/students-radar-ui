@@ -27,16 +27,54 @@ $students-radar-ui-theme: mat-light-theme($students-radar-ui-primary, $students-
 @include angular-material-theme($students-radar-ui-theme);
 
 @import './core-variables.scss';
+@import './sr-styles.scss';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: $gray-dark-color;
+    background-color: $gray-light-color;
+}
 
 ol, ul {
 	list-style: none;
+}
+
+a, input {
+    outline: none;
 }
 
 a {
     text-decoration: none;
     color: $blue-color;
     display: inline-block;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.good {
+    color: $green-color;
+}
+
+.normal {
+    color: $yellow-color;
+}
+
+.bad {
+    color: $red-color;
+}
+
+.good-level {
+    color: $green-dark-color;
+}
+
+.normal-level {
+    color: $yellow-dark-color;
+}
+
+.bad-level {
+    color: $red-dark-color;
 }

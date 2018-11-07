@@ -8,7 +8,7 @@ const routes: Routes = [
     {
         path: 'students',
         component: StudentsPageComponent,
-        children: [{ path: 'card', component: StudentCardComponent }],
+        // children: [{ path: 'card', component: StudentCardComponent }],
     },
 ];
 
