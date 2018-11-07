@@ -12,7 +12,9 @@ $base-font-size: 16px;
     @return $px / $base-font-size * 1rem;
 }
 
+// base sizes
 $normal-header-height: px-to-rem(60px);
+$normal-header-icon-width: px-to-rem(50px);
 
 @mixin full-page-image($image) {
     position: fixed;

@@ -1,1 +1,1 @@
-export { StudentsCardComponent } from './students-card';
+export { StudentCardComponent } from './student-card';

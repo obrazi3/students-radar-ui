@@ -4,11 +4,11 @@ import { MatCardModule } from '@angular/material/card';
 
 import { StudentsPageComponent } from './students.component';
 import { StudentsPageRoutingModule } from './students-routing.module';
-import { StudentsCardComponent } from './components';
+import { StudentCardComponent } from './components';
 
 @NgModule({
     imports: [CommonModule, MatCardModule, StudentsPageRoutingModule],
-    declarations: [StudentsPageComponent, StudentsCardComponent],
+    declarations: [StudentsPageComponent, StudentCardComponent],
     exports: [StudentsPageComponent],
 })
 export class StudentsPageModule {}
