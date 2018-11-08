@@ -1,0 +1,13 @@
+<div class='login-window'>
+    <h2 class='title'>Log In</h2>
+    <h3 class='status' *ngIf='statusText'>{{ statusText }}</h3>
+    <form (ngSubmit)='onSubmit()' [formGroup]='loginForm'>
+        <mat-form-field color='accent'>
+            <input [formControl]='login' formControlName='login' matInput type='text' placeholder='Login'>
+        </mat-form-field>
+        <mat-form-field color='accent'>
+            <input [formControl]='password' formControlName='password' matInput type='password' placeholder='Password'>
+        </mat-form-field>
+        <button mat-raised-button matButton class='login-btn'>{{ loginBtnText }}</button>
+    </form>
+</div>

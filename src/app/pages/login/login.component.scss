@@ -1,0 +1,54 @@
+@import '../../../theme/core-variables.scss';
+
+:host {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: px-to-rem(15px);
+    background: url('../../../assets/img/login-page/login-bg.jpg') center / cover;
+}
+
+.login-window {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 550px;
+    padding: px-to-rem(60px) px-to-rem(60px) px-to-rem(90px);
+    background-color: rgba($gray-dark-color, 0.75);
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px $gray-dark-color;
+}
+
+.title {
+    margin: 0;
+    font-size: px-to-rem(45px);
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.status {
+    margin: px-to-rem(20px) 0 px-to-rem(40px) 0;
+    font-size: px-to-rem(14px);
+    font-weight: normal;
+    text-align: center;
+    color: $blue-color;
+}
+
+form > *:not(:last-child) {
+    margin-bottom: px-to-rem(10px);
+}
+
+mat-form-field {
+    display: block;
+}
+
+.login-btn {
+    display: block;
+    margin-top: px-to-rem(30px);
+    width: 100%;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: $blue-color;
+}

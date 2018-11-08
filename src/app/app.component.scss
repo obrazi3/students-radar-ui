@@ -1,0 +1,9 @@
+@import '~src/theme/core-variables.scss';
+
+.page-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: calc(100vh - #{$normal-header-height});
+    padding: 0.1px 0; // hack for inner elements margins
+}
