@@ -1,0 +1,113 @@
+<div class="student-card">
+    <mat-card>
+        <mat-card-header>
+            <div
+                mat-card-avatar
+                class="avatar"
+                [srCardImg]="student.urlToAvatar"
+            ></div>
+
+            <mat-card-title class="student-name">{{ student.fullName }}</mat-card-title>
+
+            <i
+                class="{{ getStatus(student) }}"
+                title="Status: {{ student.status }}"
+            ></i>
+
+            <mat-card-subtitle>
+                <div
+                    class="header-info-line"
+                    title="Faculty: {{ student.faculty.name }}"
+                >
+                    <i class="ic-faculty"></i>
+                    <span>{{  student.faculty.displayName }}</span>
+                </div>
+                <div
+                    class="header-info-line"
+                    title="Speciality: {{ student.specialty }}"
+                >
+                    <i class="ic-education"></i>
+                    <span>{{ student.specialty }}</span>
+                </div>
+            </mat-card-subtitle>
+
+            <div class="gender-course">
+                <span class="{{ getGenderClass(student) }}" title="Gender: {{ student.gender }}"></span>
+                <span title="Course: {{ student.course }}">{{ getCourse(student) }}</span>
+            </div>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content class="card-content">
+            <div class="location-info">
+                <div title="Location: {{ student.location }}">
+                    <i class="ic-location"></i>
+                    <span>{{ student.location }}</span>
+                </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="birthday">
+                <div title="Birthday: {{ getBirthday(student) }}">
+                    <i class="ic-birthday"></i>
+                    <span>{{ getBirthday(student) }}</span>
+                </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="gpa-study">
+                <div class="gpa">
+                    <span
+                        title="GPA: {{ student.lastSessionGPA }}"
+                        class="{{ getGpaStatusClass(student) }}"
+                    >{{ student.lastSessionGPA }}</span>
+                </div>
+                <div class="study-form">
+                    <i
+                        class="ic-study-form"
+                        [class.paid]="student.studyForm === 'paid'"
+                        title="Study Form: {{ student.studyForm }}"
+                    ></i>
+                </div>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="privileges">
+                <span
+                    title="Privilages: {{ student.hasPrivileges ? 'Yes' : 'No' }}"
+                    [class.has-privilege]="student.hasPrivileges"
+                    [class.has-no-privilege]="!student.hasPrivileges"
+                >{{ getPrivilegesStatus(student) }}</span>
+            </div>
+
+            <mat-divider></mat-divider>
+
+            <div class="teacher-group">
+                <div class="coursework-teacher">
+                    <div
+                        class="entity-link-wrapper"
+                        title="Coursework Teacher: {{ getCourseworkTeacher(student) }}"
+                    >
+                        <i class="ic-teacher entity-icon"></i>
+                        <a href="#" class="entity-link">{{ getCourseworkTeacher(student) }}</a>
+                    </div>
+                </div>
+                <div class="group">
+                    <div
+                        class="entity-link-wrapper"
+                        title="Group: {{ getGroupName(student) }}"
+                    >
+                        <i class="ic-users entity-icon"></i>
+                        <a href="" class="entity-link">{{ getGroupName(student) }}</a>
+                    </div>
+
+                </div>
+            </div>
+
+        </mat-card-content>
+    </mat-card>
+</div>

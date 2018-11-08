@@ -1,14 +1,80 @@
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$students-radar-ui-primary: mat-palette($mat-indigo);
+$students-radar-ui-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$students-radar-ui-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$students-radar-ui-theme: mat-light-theme($students-radar-ui-primary, $students-radar-ui-accent, $students-radar-ui-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($students-radar-ui-theme);
+
 @import './core-variables.scss';
+@import './sr-styles.scss';
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: $gray-dark-color;
+    background-color: $gray-light-color;
+}
 
 ol, ul {
 	list-style: none;
+}
+
+a, input {
+    outline: none;
 }
 
 a {
     text-decoration: none;
     color: $blue-color;
     display: inline-block;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.good {
+    color: $green-color;
+}
+
+.normal {
+    color: $yellow-color;
+}
+
+.bad {
+    color: $red-color;
+}
+
+.good-level {
+    color: $green-dark-color;
+}
+
+.normal-level {
+    color: $yellow-dark-color;
+}
+
+.bad-level {
+    color: $red-dark-color;
 }

@@ -1,0 +1,13 @@
+@import '../../../../../theme/core-variables.scss';
+
+.student-cards-container {
+    margin: px-to-rem(15px);
+
+    .students {
+        display: flex;
+
+        .student {
+            margin: px-to-rem(10px);
+        }
+    }
+}

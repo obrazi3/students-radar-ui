@@ -4,6 +4,21 @@ $gray-dark-color-hover: #3c3b3d;
 $gray-dark-color: #464547;
 $blue-color: #39c2d7;
 $iris-blue: #1a9cb0;
+$gray-dark-color: #464547;
+$gray-light-color: #f6f6f6;
+$gray-color: rgba(0, 0, 0, 0.54);
+$divider-line-color: rgba(0, 0, 0, 0.12);
+$green-color: #99bc38;
+$green-dark-color: #7f993a;
+$yellow-color: #eabb20;
+$yellow-dark-color: #ecc134;
+$red-color: #eb6a5a;
+$red-dark-color: #a92a19;
+$mercury: #e1e1e1;
+$no-privileges-color: #a4aaba;
+$privileges-color: #14707e;
+$no-privilege-color: #666;
+$dark-blue: #14707e;
 
 $base-font-size: 16px;
 
@@ -12,7 +27,10 @@ $base-font-size: 16px;
     @return $px / $base-font-size * 1rem;
 }
 
+// base sizes
 $normal-header-height: px-to-rem(60px);
+$normal-header-icon-width: px-to-rem(50px);
+$default-card-width: px-to-rem(255px);
 
 @mixin full-page-image($image) {
     position: fixed;
@@ -25,6 +43,27 @@ $normal-header-height: px-to-rem(60px);
     align-items: center;
     background: url($image);
     background-size: cover;
+}
+
+@mixin base-row-card-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: px-to-rem(10px) 0;
+
+    div:hover {
+        color: $gray-dark-color-hover;
+    }
+
+    span {
+        padding-left: px-to-rem(5px);
+    }
+}
+
+@mixin text-truncate {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 $oswald-font-name: 'Oswald';

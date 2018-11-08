@@ -1,0 +1,149 @@
+@import '../../../../../theme/core-variables.scss';
+
+.student-card {
+    width: $default-card-width;
+    cursor: default;
+
+    mat-card {
+        padding-bottom: 0;
+    }
+
+    mat-card-header {
+        position: relative;
+
+        .student-name {
+            @include text-truncate;
+
+            color: $gray-dark-color;
+            font-size: px-to-rem(16px);
+            text-transform: uppercase;
+            padding-bottom: px-to-rem(10px);
+            margin: 0;
+            width: px-to-rem(140px);
+        }
+
+        mat-card-subtitle {
+            font-size: px-to-rem(12px);
+
+            .header-info-line {
+                display: inline-block;
+
+                span {
+                    padding-left: px-to-rem(5px);
+                }
+
+                &:hover {
+                    color: $gray-dark-color-hover;
+                }
+            }
+        }
+
+        .gender-course {
+            position: absolute;
+            left: 0;
+            bottom: px-to-rem(-10px);
+            color: $gray-color;
+            display: flex;
+            justify-content: center;
+            width: px-to-rem(40px);
+            margin-bottom: px-to-rem(10px);
+            font-size: px-to-rem(20px);
+
+            & span:hover {
+                color: $gray-dark-color-hover;
+            }
+        }
+    }
+
+    .card-content {
+        color: $gray-color;
+
+        .location-info {
+            @include base-row-card-content;
+        }
+
+        .birthday {
+            @include base-row-card-content;
+        }
+
+        .gpa-study {
+            display: flex;
+            margin-top: px-to-rem(1px);
+            font-size: px-to-rem(25px);
+
+            .gpa,
+            .study-form {
+                display: flex;
+                justify-content: center;
+                width: calc(50% - .5px);
+                padding: px-to-rem(10px) 0;
+            }
+
+            .gpa {
+                border-right: px-to-rem(1px) solid $divider-line-color;
+            }
+
+            .study-form {
+                i {
+                    transform: translateY(px-to-rem(2.5px));
+                }
+
+                .paid {
+                    color: $dark-blue;
+                }
+            }
+        }
+
+        .privileges {
+            display: flex;
+            justify-content: center;
+            padding: px-to-rem(10px);
+            font-size: px-to-rem(15px);
+
+            .has-no-privilege {
+                color: $no-privileges-color;
+            }
+
+            .has-privilege {
+                color: $privileges-color;
+            }
+        }
+
+        .teacher-group {
+            display: flex;
+            margin-top: px-to-rem(1px);
+
+            .coursework-teacher,
+            .group {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: calc(50% - .5px);
+                padding: px-to-rem(10px) 0;
+            }
+
+            .entity-link-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .entity-icon {
+                font-size: px-to-rem(25px);
+            }
+
+            .entity-link {
+                font-size: px-to-rem(12px);
+            }
+
+            .coursework-teacher {
+                border-right: px-to-rem(1px) solid $divider-line-color;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0 0 px-to-rem(10px) $gray-dark-color-hover;
+    }
+}

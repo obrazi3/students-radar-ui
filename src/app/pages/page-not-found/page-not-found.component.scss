@@ -1,7 +1,7 @@
 @import '../../../theme/core-variables.scss';
 
 .not-found-page {
-    @include full-page-image('../../../assets/img/page-not-found.png');
+    @include full-page-image('../../../assets/img/pnf-min.png');
 
     text-align: center;
     user-select: none;

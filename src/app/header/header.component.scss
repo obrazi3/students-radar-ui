@@ -6,6 +6,18 @@ header {
     nav {
         display: flex;
 
+        .header-img {
+            display: flex;
+            align-items: center;
+            height: $normal-header-height;
+            width: $normal-header-icon-width;
+            padding: 0 px-to-rem(10px);
+
+            img {
+                max-width: 100%;
+            }
+        }
+
         .bashboard {
             height: $normal-header-height;
             border-bottom: solid px-to-rem(3px) $gray-dark-color;

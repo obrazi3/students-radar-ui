@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'ic-students-radar';
+    src:
+        url('../assets/fonts/sr-fonts/ic-students-radar.ttf?a6hgkq') format('truetype'),
+        url('../assets/fonts/sr-fonts/ic-students-radar.woff?a6hgkq') format('woff'),
+        url('../assets/fonts/sr-fonts/ic-students-radar.svg?a6hgkq#ic-students-radar') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="ic-"],
+[class*=" ic-"] {
+    font-family: 'ic-students-radar' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.ic-microsoftexcel:before {
+    content: '\e900';
+    color: #217346;
+}
+.ic-number:before {
+    content: '\e901';
+}
+.ic-pencil:before {
+    content: '\e906';
+}
+.ic-file-text:before {
+    content: '\e922';
+}
+.ic-profile:before {
+    content: '\e923';
+}
+.ic-study-form:before {
+    content: '\e93b';
+}
+.ic-mail:before {
+    content: '\e945';
+}
+.ic-location:before {
+    content: '\e947';
+}
+.ic-user:before {
+    content: '\e971';
+}
+.ic-users:before {
+    content: '\e972';
+}
+.ic-teacher:before {
+    content: '\e976';
+}
+.ic-star-full:before {
+    content: '\e9d9';
+}
+.ic-man:before {
+    content: '\e9dc';
+}
+.ic-woman:before {
+    content: '\e9dd';
+}
+.ic-warning:before {
+    content: '\ea07';
+}
+.ic-notification:before {
+    content: '\ea08';
+}
+.ic-pause:before {
+    content: '\ea16';
+}
+.ic-faculty:before {
+    content: '\ea5c';
+}
+.ic-file-excel:before {
+    content: '\eae2';
+}
+.ic-birthday:before {
+    content: '\e902';
+}
+.ic-education:before {
+    content: '\e903';
+}
+.ic-checkmark:before {
+    content: '\ea10';
+}
