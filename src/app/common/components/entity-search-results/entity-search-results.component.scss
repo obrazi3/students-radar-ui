@@ -1,5 +1,16 @@
 @import '../../../../theme/core-variables.scss';
 
-.results-container {
-
+:host {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: $white-color;
+    color: $gray-color;
+    box-shadow:
+        0 px-to-rem(4px) px-to-rem(8px) 0 rgba(0, 0, 0, .5),
+        0 px-to-rem(4px) px-to-rem(8px) 0 rgba(0, 0, 0, .5);
+    width: $entity-search-results-width;
+    max-height: 70vh;
+    overflow-y: auto;
+    z-index: 999;
 }

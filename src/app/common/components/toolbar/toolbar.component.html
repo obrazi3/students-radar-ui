@@ -1,3 +1,5 @@
 <div class="toolbar">
     <sr-entity-serach></sr-entity-serach>
+    <sr-entity-search-results *ngIf="check"></sr-entity-search-results>
+    <button (click)="check = !check">show</button>
 </div>

@@ -1,4 +1,6 @@
-export interface IStudent {
+import { IEntity } from './IEntity';
+
+export interface IStudent extends IEntity {
     birthday: number;
     course: number;
     faculty: IFaculty;
@@ -13,7 +15,6 @@ export interface IStudent {
     specialty: string;
     status: StudentStatus;
     studyForm: StudyForm;
-    urlToAvatar: string; // mb this field should be optional
 }
 
 export interface IFaculty {

@@ -1,4 +1,4 @@
-import { IStudent, Gender, StudentStatus, StudyForm } from '../../dto';
+import { IStudent, Gender, StudentStatus, StudyForm, EntityType } from '../../dto';
 
 export const MOCK_STUDENTS: IStudent[] = [
     {
@@ -9,6 +9,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             displayName: 'RFaCT',
         },
         courseworkTeacher: { name: 'Isaac Newton' },
+        entityType: EntityType.Students,
         fullName: 'Albert Einstein',
         gender: Gender.Male,
         group: { name: '1+5 AI' },
@@ -19,6 +20,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Applied Informatics',
         status: StudentStatus.Study,
         studyForm: StudyForm.Free,
+        title: 'Albert Einstein',
         urlToAvatar:
             'https://www.biography.com/.image/t_share/MTE5NDg0MDU0OTU2OTAxOTAz/albert-einstein-9285408-1-402.jpg',
     },
@@ -30,6 +32,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             displayName: 'RFaCT',
         },
         courseworkTeacher: { name: 'Michael Faraday' },
+        entityType: EntityType.Students,
         fullName: 'William Gilbert',
         gender: Gender.Male,
         group: { name: '5+7 CS' },
@@ -40,6 +43,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.AcademicVacation,
         studyForm: StudyForm.Paid,
+        title: 'William Gilbert',
         urlToAvatar:
             'https://static1.squarespace.com/static/5793e055e6f2e155ae8d79d9/t/58c6013d1e5b6c36786b0bb9/1489371458218/',
     },
@@ -51,6 +55,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             displayName: 'RFaCT',
         },
         courseworkTeacher: { name: 'Max Planck' },
+        entityType: EntityType.Students,
         fullName: 'Heinrich Hertz',
         gender: Gender.Male,
         group: { name: '5+7 CS' },
@@ -61,6 +66,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.Debt,
         studyForm: StudyForm.Paid,
+        title: 'Heinrich Hertz',
         urlToAvatar: 'https://upload.wikimedia.org/wikipedia/commons/3/30/HEINRICH_HERTZ.JPG',
     },
     {
@@ -71,6 +77,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             displayName: 'RFaCT',
         },
         courseworkTeacher: { name: 'Max Planck' },
+        entityType: EntityType.Students,
         fullName: 'Emmy Noether',
         gender: Gender.Female,
         group: { name: '5+7 CS' },
@@ -81,6 +88,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.Study,
         studyForm: StudyForm.Free,
+        title: 'Emmy Noether',
         urlToAvatar:
             'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/' +
             'Noether_retusche_nachcoloriert.jpg/220px-Noether_retusche_nachcoloriert.jpg',
@@ -93,6 +101,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             displayName: 'RFaCT',
         },
         courseworkTeacher: { name: 'Max Planck' },
+        entityType: EntityType.Students,
         fullName: 'Nikola Tesla',
         gender: Gender.Male,
         group: { name: '5+7 CS' },
@@ -103,6 +112,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.Study,
         studyForm: StudyForm.Free,
+        title: 'Nikola Tesla',
         urlToAvatar: 'https://www.biographyonline.net/wp-content/uploads/2014/05/tesla2.jpg',
     },
     {
@@ -113,6 +123,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             displayName: 'RFaCT',
         },
         courseworkTeacher: { name: 'Max Planck' },
+        entityType: EntityType.Students,
         fullName: 'Galileo Galilei',
         gender: Gender.Male,
         group: { name: '5+7 CS' },
@@ -123,6 +134,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.Study,
         studyForm: StudyForm.Paid,
+        title: 'Galileo Galilei',
         urlToAvatar: 'https://www.historyonthenet.com/wp-content/uploads/2014/07/galileogalilei.jpg',
     },
     {
@@ -133,6 +145,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             displayName: 'RFaCT',
         },
         courseworkTeacher: { name: 'Max Planck' },
+        entityType: EntityType.Students,
         fullName: 'Carl Friedrich Gauss',
         gender: Gender.Male,
         group: { name: '5+7 CS' },
@@ -143,6 +156,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.AcademicVacation,
         studyForm: StudyForm.Free,
+        title: 'Carl Friedrich Gauss',
         urlToAvatar: 'https://cdn.britannica.com/s:300x300/27/190027-004-11966B78.jpg',
     },
     {
@@ -153,6 +167,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             displayName: 'RFaCT',
         },
         courseworkTeacher: { name: 'Max Planck' },
+        entityType: EntityType.Students,
         fullName: 'Isaac Newton',
         gender: Gender.Male,
         group: { name: '5+7 CS' },
@@ -163,6 +178,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.Study,
         studyForm: StudyForm.Free,
+        title: 'Isaac Newton',
         urlToAvatar:
             'https://upload.wikimedia.org/wikipedia/commons/' +
             'thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/220px-GodfreyKneller-IsaacNewton-1689.jpg',

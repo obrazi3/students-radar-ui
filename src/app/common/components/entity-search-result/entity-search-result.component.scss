@@ -1,1 +1,9 @@
 @import '../../../../theme/core-variables.scss';
+
+.entity-result {
+    display: flex;
+
+    .title {
+        cursor: pointer;
+    }
+}

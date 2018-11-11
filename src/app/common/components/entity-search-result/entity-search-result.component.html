@@ -1,0 +1,10 @@
+<div class="entity-result">
+    <sr-avatar [avatarUrl]="entity.avatarUrl"></sr-avatar>
+    <div class="entity-info">
+        <a class="title">{{ entity.title }}</a>
+        <div
+            class="sub-info"
+            [title]="getEntityInfoTitle(entity)"
+        >{{ getEntityInfo(entity) }}</div>
+    </div>
+</div>

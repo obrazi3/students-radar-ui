@@ -1,0 +1,7 @@
+<img
+    *ngIf="!isShownDefault"
+    class="avatar"
+    [src]="avatarUrl"
+    (error)="onError($event)"
+/>
+<span *ngIf="isShownDefault" class="avatar"><span>
