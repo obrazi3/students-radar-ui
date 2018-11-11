@@ -61,7 +61,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.Debt,
         studyForm: StudyForm.Paid,
-        urlToAvatar: 'https://www.famousscientists.org/80/80-heinrich-hertz.jpg',
+        urlToAvatar: 'https://upload.wikimedia.org/wikipedia/commons/3/30/HEINRICH_HERTZ.JPG',
     },
     {
         birthday: 726370000000,
@@ -81,7 +81,9 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.Study,
         studyForm: StudyForm.Free,
-        urlToAvatar: 'https://www.famousscientists.org/80/80-emmy-noether.jpg',
+        urlToAvatar:
+            'https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/' +
+            'Noether_retusche_nachcoloriert.jpg/220px-Noether_retusche_nachcoloriert.jpg',
     },
     {
         birthday: 726370000000,
@@ -121,7 +123,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.Study,
         studyForm: StudyForm.Paid,
-        urlToAvatar: 'https://www.famousscientists.org/80/80-galileo-galilei.jpg',
+        urlToAvatar: 'https://www.historyonthenet.com/wp-content/uploads/2014/07/galileogalilei.jpg',
     },
     {
         birthday: 756570000000,
@@ -141,7 +143,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.AcademicVacation,
         studyForm: StudyForm.Free,
-        urlToAvatar: 'https://www.famousscientists.org/80/80-carl-friedrich-gauss.jpg',
+        urlToAvatar: 'https://cdn.britannica.com/s:300x300/27/190027-004-11966B78.jpg',
     },
     {
         birthday: 746570000000,
@@ -161,6 +163,8 @@ export const MOCK_STUDENTS: IStudent[] = [
         specialty: 'Computer Security',
         status: StudentStatus.Study,
         studyForm: StudyForm.Free,
-        urlToAvatar: 'https://www.famousscientists.org/80/80-isaac-newton.png',
+        urlToAvatar:
+            'https://upload.wikimedia.org/wikipedia/commons/' +
+            'thumb/3/39/GodfreyKneller-IsaacNewton-1689.jpg/220px-GodfreyKneller-IsaacNewton-1689.jpg',
     },
 ];

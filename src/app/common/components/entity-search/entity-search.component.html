@@ -1,13 +1,15 @@
-<div class="search">
+<div class="entity-search">
+    <i class="ic-search search"></i>
     <input
         #input
         type="text"
-        [maxlength]="50"
+        [maxlength]="maxSearchStringLength"
         placeholder="Search"
         class="form-control"
         [(ngModel)]="value"
     >
     <i
+        *ngIf="!isVisibleButton()"
         class="clear-button ic-close"
         (click)="onClear()"
     ></i>

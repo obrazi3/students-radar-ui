@@ -1,9 +1,14 @@
 @import '../../../../theme/core-variables.scss';
 
-.search {
+.entity-search {
     position: relative;
     display: flex;
     align-items: center;
+
+    .search {
+        margin-right: px-to-rem(5px);
+        font-size: px-to-rem(20px);
+    }
 
     input {
         @include light-font-color;
@@ -42,10 +47,6 @@
         margin-top: px-to-rem(-16px);
         width: auto;
         z-index: 3;
-
-        &.hidden {
-            visibility: hidden;
-        }
 
         &:hover {
             cursor: pointer;

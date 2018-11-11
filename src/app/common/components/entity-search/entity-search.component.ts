@@ -6,9 +6,15 @@ import { Component } from '@angular/core';
     styleUrls: ['./entity-search.component.scss'],
 })
 export class EntitySearchComponent {
-    public value: string;
+    public value = '';
+
+    readonly maxSearchStringLength = 20;
 
     public onClear() {
         this.value = '';
+    }
+
+    public isVisibleButton(): boolean {
+        return this.value === '';
     }
 }
