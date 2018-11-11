@@ -7,4 +7,8 @@ import { Component, HostBinding } from '@angular/core';
 })
 export class ToolbarComponent {
     public check = false;
+
+    public onInputClear() {
+        this.check = false;
+    }
 }

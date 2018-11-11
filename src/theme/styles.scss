@@ -33,12 +33,37 @@ $students-radar-ui-theme: mat-light-theme($students-radar-ui-primary, $students-
 html, body { height: 100%; }
 body {
     margin: 0;
-    // font-family: Roboto, "Helvetica Neue", sans-serif;
     font-family: $oswald-font-name;
     color: $gray-dark-color;
     background-color: $gray-light-color;
     font-size: $base-font-size;
     min-width: $min-page-width;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background-color: $gray95-color;
+}
+
+::-webkit-scrollbar-thumb{
+    border-width:1px 1px 1px 2px;
+    border-color: #777;
+    background-color: #aaa;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    border-width: 1px 1px 1px 2px;
+    border-color: #555;
+    background-color: #777;
+}
+
+::-webkit-scrollbar-track{
+    border-width:0;
+}
+
+::-webkit-scrollbar-track:hover{
+    border-left: solid 1px #aaa;
+    background-color: #eee;
 }
 
 ol, ul {

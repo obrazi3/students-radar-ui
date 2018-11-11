@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
-import { SearchableEntitie, EntityType } from '../../../dto';
+import { SearchableEntity, EntityType, IStudent } from '../../../dto';
 
 @Component({
     selector: 'sr-entity-search-result',
@@ -9,31 +9,39 @@ import { SearchableEntitie, EntityType } from '../../../dto';
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EntitySearchResultComponent {
-    @Input() entity: SearchableEntitie;
+    @Input() entity: SearchableEntity;
 
-    public getEntityInfo(entity: SearchableEntitie): string {
+    public getEntityInfo(entity: SearchableEntity): string {
         switch (entity.entityType) {
             case EntityType.Students:
-                return `${entity.faculty.displayName} | ${entity.specialty} | ${entity.group.name} | ${entity.status}`;
+                return this.getStudentInfo(entity);
             default:
                 return 'No information';
         }
     }
 
-    public getEntityInfoTitle(entity: SearchableEntitie): string {
+    public getEntityInfoTitle(entity: SearchableEntity): string {
         switch (entity.entityType) {
             case EntityType.Students:
-                return (
-                    `Faculty: ${entity.faculty.displayName}` +
-                    '\n' +
-                    `Speciality: ${entity.specialty}` +
-                    '\n' +
-                    `Group: ${entity.group.name}` +
-                    '\n' +
-                    `Status: ${entity.status}`
-                );
+                return this.getStudentInfoTitle(entity);
             default:
                 return 'No information';
         }
+    }
+
+    private getStudentInfo(student: IStudent): string {
+        return `${student.faculty.displayName} | ${student.specialty} | ${student.group.name} | ${student.status}`;
+    }
+
+    private getStudentInfoTitle(student: IStudent): string {
+        return (
+            `Faculty: ${student.faculty.displayName}` +
+            '\n' +
+            `Speciality: ${student.specialty}` +
+            '\n' +
+            `Group: ${student.group.name}` +
+            '\n' +
+            `Status: ${student.status}`
+        );
     }
 }

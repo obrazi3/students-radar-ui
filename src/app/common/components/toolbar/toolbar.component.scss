@@ -3,15 +3,10 @@
 $app-toolbar-height: px-to-rem(60px);
 $app-toolbar-divider-color: $gray-stroke-color;
 
-// :host {
-//     position: sticky;
-//     top: 0;
-// }
-
 .toolbar {
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: $toolbar-z-index;
     display: flex;
     align-items: center;
     background: $white-color;

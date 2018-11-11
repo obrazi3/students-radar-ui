@@ -20,6 +20,8 @@ $privileges-color: #14707e;
 $no-privilege-color: #666;
 $dark-blue: #14707e;
 $gray-stroke-color: #e2e2e2;
+$gray-medium-color: #5e5e5e;
+$gray95-color: #f1f1f1;
 
 $base-font-size: 16px;
 
@@ -39,6 +41,9 @@ $min-page-width: 1200px;
 
 $app-toolbar-height: px-to-rem(60px);
 $entity-search-results-width: px-to-rem(400px);
+
+$toolbar-z-index: 999;
+$entity-search-results-z-index: 9999;
 
 // fonts
 $oswald-font-name: 'Oswald';

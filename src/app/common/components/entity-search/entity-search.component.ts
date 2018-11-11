@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'sr-entity-serach',
@@ -6,12 +6,27 @@ import { Component } from '@angular/core';
     styleUrls: ['./entity-search.component.scss'],
 })
 export class EntitySearchComponent {
-    public value = '';
+    @Output() close = new EventEmitter<null>();
 
+    public value = '';
     readonly maxSearchStringLength = 20;
 
-    public onClear() {
+    public onClear(input: HTMLInputElement) {
+        input.focus();
         this.value = '';
+        this.close.emit(null);
+    }
+
+    public onKeyUp(event: KeyboardEvent, input: HTMLInputElement) {
+        if (event.keyCode === 27) {
+            const valueBeforeClear = input.value;
+            this.onClear(input);
+            if (!valueBeforeClear) {
+                input.blur();
+            } else {
+                event.stopPropagation();
+            }
+        }
     }
 
     public isVisibleButton(): boolean {

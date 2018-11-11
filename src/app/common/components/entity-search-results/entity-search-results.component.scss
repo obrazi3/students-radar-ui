@@ -1,16 +1,38 @@
 @import '../../../../theme/core-variables.scss';
 
 :host {
+    @include light-font-color;
+
     position: absolute;
     top: 100%;
     left: 0;
     background-color: $white-color;
-    color: $gray-color;
     box-shadow:
         0 px-to-rem(4px) px-to-rem(8px) 0 rgba(0, 0, 0, .5),
         0 px-to-rem(4px) px-to-rem(8px) 0 rgba(0, 0, 0, .5);
     width: $entity-search-results-width;
     max-height: 70vh;
     overflow-y: auto;
-    z-index: 999;
+    z-index: $entity-search-results-z-index;
+    font-family: $source-sans-pro-font-name;
+    letter-spacing: px-to-rem(.5px);
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    color: $gray-medium-color;
+    background-color: $gray95-color;
+    padding: px-to-rem(5px);
+
+    .entity-type {
+        font-size: px-to-rem(14px);
+    }
+
+    .counts {
+        font-size: px-to-rem(12px);
+    }
 }

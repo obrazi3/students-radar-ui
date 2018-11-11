@@ -2,8 +2,22 @@
 
 .entity-result {
     display: flex;
+    padding: px-to-rem(8px) px-to-rem(5px);
+    cursor: pointer;
 
     .title {
-        cursor: pointer;
+        font-size: px-to-rem(14px);
+    }
+
+    .entity-info {
+        margin-left: px-to-rem(10px);
+
+        .sub-info {
+            font-size: px-to-rem(12px);
+        }
+    }
+
+    &:hover {
+        background-color: $gray-light-color;
     }
 }

@@ -7,10 +7,11 @@
         placeholder="Search"
         class="form-control"
         [(ngModel)]="value"
+        (keyup)="onKeyUp(input)"
     >
     <i
         *ngIf="!isVisibleButton()"
         class="clear-button ic-close"
-        (click)="onClear()"
+        (click)="onClear(input)"
     ></i>
 </div>
