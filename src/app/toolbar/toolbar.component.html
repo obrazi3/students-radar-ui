@@ -4,8 +4,8 @@
         (change)="onSearchInputChange($event)"
     ></sr-entity-serach>
     <sr-entity-search-results
-        *ngIf="isSearchResultsShown"
+        *ngIf="isShowSearchResults"
         [entities]="entities"
+        [isLoading]="isLoadingSearchResults"
     ></sr-entity-search-results>
-    <button (click)="isSearchResultsShown = !isSearchResultsShown">show</button>
 </div>

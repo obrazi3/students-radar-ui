@@ -10,3 +10,10 @@ export const slideResultsAnimation: AnimationTriggerMetadata = trigger('slideAni
     transition('void => left', [style({ transform: 'translateX(-100%)' }), animate('300ms ease-out')]),
     transition('left => void', [animate('300ms ease-out', style({ transform: 'translateX(-100%)' }))]),
 ]);
+
+export const loadedResultsAnimation: AnimationTriggerMetadata = trigger('loadedAnimation', [
+    state('loaded', style({ height: '55vh' })),
+
+    transition('void => loaded', animate('300ms ease-out')),
+    transition('loaded => void', [animate('300ms ease-out', style({ height: '30px' }))]),
+]);

@@ -6,7 +6,8 @@ export enum ToolbarActionTypes {
     SHOW = '[Toolbar] Show Entity Search Results Window',
     HIDE = '[Toolbar] Hide Entity Search Results Window',
     REQUEST_ENTITIES = '[Toolbar] Request Searchable Entities',
-    RECEIVE_ENTITIES = '[Toolbar] Receive Searchable Entities',
+    LOAD_ENTITIES_SUCCESS = '[Toolbar] Load Searchable Entities',
+    LOAD_ENTITIES_FAILED = '[Toolbar] Load Searchable Entities Failded',
 }
 
 export class Show implements Action {
@@ -19,11 +20,17 @@ export class Hide implements Action {
 
 export class RequesEntities implements Action {
     readonly type = ToolbarActionTypes.REQUEST_ENTITIES;
+    constructor(public payload: string) {}
 }
 
-export class ReceiveEntities implements Action {
-    readonly type = ToolbarActionTypes.RECEIVE_ENTITIES;
+export class LoadEntitiesSuccess implements Action {
+    readonly type = ToolbarActionTypes.LOAD_ENTITIES_SUCCESS;
     constructor(public payload: SearchableEntities) {}
 }
 
-export type EntitySearchResultsActions = Show | Hide | RequesEntities | ReceiveEntities;
+export class LoadEntitiesFailed implements Action {
+    readonly type = ToolbarActionTypes.LOAD_ENTITIES_FAILED;
+    constructor(public payload: Error) {}
+}
+
+export type EntitySearchResultsActions = Show | Hide | RequesEntities | LoadEntitiesSuccess | LoadEntitiesFailed;

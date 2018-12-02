@@ -1,6 +1,6 @@
-import { Component, OnInit, HostBinding, Input, ChangeDetectionStrategy } from '@angular/core';
+import { Component, HostBinding, Input, ChangeDetectionStrategy } from '@angular/core';
 
-import { slideResultsAnimation } from './animations';
+import { slideResultsAnimation, loadedResultsAnimation } from './animations';
 import { SearchableEntities } from '../../../dto';
 
 @Component({
@@ -8,17 +8,19 @@ import { SearchableEntities } from '../../../dto';
     templateUrl: './entity-search-results.component.html',
     styleUrls: ['./entity-search-results.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
-    animations: [slideResultsAnimation],
+    animations: [slideResultsAnimation, loadedResultsAnimation],
 })
-export class EntitySearchResultsComponent implements OnInit {
+export class EntitySearchResultsComponent {
     @HostBinding('@slideAnimation')
     get slideFrom() {
         return 'left';
     }
+    @HostBinding('@loadedAnimation')
+    get load() {
+        // return this.isLoading === false ? 'loaded' : '';
+        return 'loaded';
+    }
 
     @Input() entities: SearchableEntities;
-
-    ngOnInit() {
-        // ...
-    }
+    @Input() isLoading: boolean;
 }
