@@ -1,0 +1,11 @@
+<div class="toolbar">
+    <sr-entity-serach
+        (close)="onInputClear()"
+        (change)="onSearchInputChange($event)"
+    ></sr-entity-serach>
+    <sr-entity-search-results
+        *ngIf="isSearchResultsShown"
+        [entities]="entities"
+    ></sr-entity-search-results>
+    <button (click)="isSearchResultsShown = !isSearchResultsShown">show</button>
+</div>

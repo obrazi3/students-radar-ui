@@ -3,14 +3,12 @@
     <input
         #input
         type="text"
+        [(ngModel)]="value"
         [maxlength]="maxSearchStringLength"
         placeholder="Search"
-        class="form-control"
-        [(ngModel)]="value"
-        (keyup)="onKeyUp(input)"
     >
     <i
-        *ngIf="!isVisibleButton()"
+        *ngIf="!isVisibleButton(input)"
         class="clear-button ic-close"
         (click)="onClear(input)"
     ></i>

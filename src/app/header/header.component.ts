@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import { AppState, AppStateFields } from '../store';
@@ -11,11 +11,13 @@ import { SetActiveDashboard } from './header.actions';
     templateUrl: './header.component.html',
     styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
     public navDashboards = navigationDashboards;
     public activeDashboard: EntityType;
 
-    constructor(private store: Store<AppState>) {
+    constructor(private store: Store<AppState>) {}
+
+    ngOnInit() {
         this.store.select(AppStateFields.Header).subscribe(state => (this.activeDashboard = state.activeDashboard));
     }
 

@@ -1,12 +1,13 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, Input, ChangeDetectionStrategy } from '@angular/core';
 
-import { MOCK_STUDENTS } from '../../../mock-data/students';
 import { slideResultsAnimation } from './animations';
+import { SearchableEntities } from '../../../dto';
 
 @Component({
     selector: 'sr-entity-search-results',
     templateUrl: './entity-search-results.component.html',
     styleUrls: ['./entity-search-results.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
     animations: [slideResultsAnimation],
 })
 export class EntitySearchResultsComponent implements OnInit {
@@ -15,9 +16,9 @@ export class EntitySearchResultsComponent implements OnInit {
         return 'left';
     }
 
-    public entities = MOCK_STUDENTS.slice(0);
+    @Input() entities: SearchableEntities;
 
     ngOnInit() {
-        console.log(1);
+        // ...
     }
 }

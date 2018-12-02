@@ -2,6 +2,7 @@ import { IStudent, Gender, StudentStatus, StudyForm, EntityType } from '../../dt
 
 export const MOCK_STUDENTS: IStudent[] = [
     {
+        id: '1',
         birthday: 926370000000,
         course: 3,
         faculty: {
@@ -25,6 +26,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             'https://www.biography.com/.image/t_share/MTE5NDg0MDU0OTU2OTAxOTAz/albert-einstein-9285408-1-402.jpg',
     },
     {
+        id: '2',
         birthday: 826370000000,
         course: 4,
         faculty: {
@@ -48,6 +50,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             'https://static1.squarespace.com/static/5793e055e6f2e155ae8d79d9/t/58c6013d1e5b6c36786b0bb9/1489371458218/',
     },
     {
+        id: '3',
         birthday: 626370000000,
         course: 2,
         faculty: {
@@ -70,6 +73,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         urlToAvatar: 'https://upload.wikimedia.org/wikipedia/commons/3/30/HEINRICH_HERTZ.JPG',
     },
     {
+        id: '4',
         birthday: 726370000000,
         course: 3,
         faculty: {
@@ -94,6 +98,7 @@ export const MOCK_STUDENTS: IStudent[] = [
             'Noether_retusche_nachcoloriert.jpg/220px-Noether_retusche_nachcoloriert.jpg',
     },
     {
+        id: '5',
         birthday: 726370000000,
         course: 3,
         faculty: {
@@ -116,6 +121,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         urlToAvatar: 'https://www.biographyonline.net/wp-content/uploads/2014/05/tesla2.jpg',
     },
     {
+        id: '6',
         birthday: 756370000000,
         course: 4,
         faculty: {
@@ -138,6 +144,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         urlToAvatar: 'https://www.historyonthenet.com/wp-content/uploads/2014/07/galileogalilei.jpg',
     },
     {
+        id: '7',
         birthday: 756570000000,
         course: 1,
         faculty: {
@@ -160,6 +167,7 @@ export const MOCK_STUDENTS: IStudent[] = [
         urlToAvatar: 'https://cdn.britannica.com/s:300x300/27/190027-004-11966B78.jpg',
     },
     {
+        id: '8',
         birthday: 746570000000,
         course: 4,
         faculty: {

@@ -1,2 +1,9 @@
-<sr-toolbar></sr-toolbar>
+<sr-toolbar
+    [entityType]="entityType"
+    [isLoadingSearchResults]="toolbarState.isLoadingSearchResults"
+    [isShowSearchResults]="toolbarState.isShowSearchResults"
+    [entities]="toolbarState.entities"
+    (closeEntitiesResultsWindow)="onCloseEntitiesResultsWindow()"
+    (entitiesSearchRequest)="onEntitiesSearchRequest($event)"
+></sr-toolbar>
 <sr-student-cards-container></sr-student-cards-container>

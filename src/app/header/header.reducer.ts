@@ -2,7 +2,7 @@ import { EntityType } from '../dto';
 import { HeaderState } from './header.models';
 import { HeaderActions, HeaderActionTypes } from './header.actions';
 
-export const initialState: HeaderState = {
+const initialState: HeaderState = {
     activeDashboard: EntityType.Students,
 };
 

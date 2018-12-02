@@ -7,9 +7,10 @@ import { StudentsPageComponent } from './students.component';
 import { StudentsPageRoutingModule } from './students-routing.module';
 import { STUDENTS_COMPONENTS } from './components';
 import { AppCommonModule } from '../../common';
+import { ToolbarModule } from '../../toolbar';
 
 @NgModule({
-    imports: [CommonModule, MatCardModule, MatDividerModule, AppCommonModule, StudentsPageRoutingModule],
+    imports: [CommonModule, MatCardModule, MatDividerModule, AppCommonModule, ToolbarModule, StudentsPageRoutingModule],
     declarations: [StudentsPageComponent, ...STUDENTS_COMPONENTS],
     exports: [StudentsPageComponent],
 })
