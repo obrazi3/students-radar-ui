@@ -10,8 +10,7 @@ import { IStudent, StudentStatus, StudentStatusClasses, Gender, StudyForm } from
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StudentCardComponent {
-    @Input()
-    public student: IStudent;
+    @Input() student: IStudent;
 
     public getStatus(student: IStudent): string {
         switch (student.status) {

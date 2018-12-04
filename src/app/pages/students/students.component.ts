@@ -1,31 +1,47 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import { AppState, AppStateFields } from '../../store';
 import { EntityType } from '../../dto';
-import { RequesEntities, Show, Hide } from '../../toolbar/toolbar.actions';
+import {
+    RequesSearchableEntities,
+    ShowEntitySearchResultsWindow,
+    HideEntitySearchResultsWindow,
+} from '../../toolbar/toolbar.actions';
+import { ToolbarState } from '../../toolbar';
+import { StudentsCardsState, RequestStudentsCards } from './components';
 
 @Component({
     selector: 'sr-students-page',
     templateUrl: './students.component.html',
     styleUrls: ['./students.component.scss'],
 })
-export class StudentsPageComponent implements OnInit {
-    public toolbarState: AppState[AppStateFields.Toolbar];
+export class StudentsPageComponent implements OnInit, OnDestroy {
     public entityType = EntityType.Students;
+    public toolbarState: ToolbarState;
+    public studentsCardsState: StudentsCardsState;
 
     constructor(private store: Store<AppState>) {}
 
     ngOnInit() {
-        this.store.select(AppStateFields.Toolbar).subscribe(state => (this.toolbarState = state));
+        this.store.select(AppStateFields.StudentsPage).subscribe(state => {
+            this.toolbarState = state.toolbar;
+            this.studentsCardsState = state.cards;
+        });
+
+        this.store.dispatch(new RequestStudentsCards());
     }
 
     public onEntitiesSearchRequest(query: string) {
-        this.store.dispatch(new RequesEntities(query));
-        this.store.dispatch(new Show());
+        this.store.dispatch(new RequesSearchableEntities(query));
+        this.store.dispatch(new ShowEntitySearchResultsWindow());
     }
 
     public onCloseEntitiesResultsWindow() {
-        this.store.dispatch(new Hide());
+        this.store.dispatch(new HideEntitySearchResultsWindow());
+    }
+
+    ngOnDestroy() {
+        this.store.dispatch(new HideEntitySearchResultsWindow());
     }
 }

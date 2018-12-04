@@ -1,12 +1,14 @@
 import { HeaderState } from '../header';
-import { ToolbarState } from '../toolbar';
+import { StudentsPageState } from '../pages/students';
 
 export enum AppStateFields {
     Header = 'header',
-    Toolbar = 'toolbar',
+    Toolbar = 'toolbar', // will be removed soon
+    StudentsPage = 'studentsPage',
 }
 
 export interface AppState {
     [AppStateFields.Header]: HeaderState;
-    [AppStateFields.Toolbar]: ToolbarState;
+    [AppStateFields.StudentsPage]: StudentsPageState;
+    // [AppStateFields.Toolbar]: ToolbarState;
 }

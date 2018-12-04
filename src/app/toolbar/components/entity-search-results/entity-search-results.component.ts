@@ -21,6 +21,7 @@ export class EntitySearchResultsComponent {
         return 'loaded';
     }
 
+    @Input() entitiesResultTitle: string;
     @Input() entities: SearchableEntities;
     @Input() isLoading: boolean;
 }

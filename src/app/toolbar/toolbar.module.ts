@@ -5,12 +5,12 @@ import { FormsModule } from '@angular/forms';
 import { TOOLBAR_COMPONENTS } from './components';
 import { AppCommonModule } from '../common';
 import { ToolbarComponent } from './toolbar.component';
-import { EntitySearchService } from './entity-search.service';
+import { ToolbarService } from './toolbar.service';
 
 @NgModule({
     declarations: [...TOOLBAR_COMPONENTS, ToolbarComponent],
     imports: [CommonModule, FormsModule, AppCommonModule],
     exports: [...TOOLBAR_COMPONENTS, ToolbarComponent],
-    providers: [EntitySearchService],
+    providers: [ToolbarService],
 })
 export class ToolbarModule {}

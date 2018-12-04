@@ -1,5 +1,5 @@
 <div class="student-cards-container">
-    <div class="students">
+    <div *ngIf="!isLoading && students.length" class="students">
         <div
             class="student"
             *ngFor="let student of students"
@@ -7,4 +7,8 @@
             <sr-student-card [student]="student"></sr-student-card>
         </div>
     </div>
+    <sr-loading-spinner
+        *ngIf="isLoading"
+        [show]="true"
+    ></sr-loading-spinner>
 </div>

@@ -5,7 +5,7 @@
         type="text"
         [(ngModel)]="value"
         [maxlength]="maxSearchStringLength"
-        placeholder="Search"
+        [placeholder]="placeholder"
     >
     <i
         *ngIf="!isVisibleButton(input)"

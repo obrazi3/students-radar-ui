@@ -6,4 +6,8 @@
     (closeEntitiesResultsWindow)="onCloseEntitiesResultsWindow()"
     (entitiesSearchRequest)="onEntitiesSearchRequest($event)"
 ></sr-toolbar>
-<sr-student-cards-container></sr-student-cards-container>
+<sr-student-cards-container
+    [students]="studentsCardsState.entities"
+    [isLoading]="studentsCardsState.isLoadingStudentsCards"
+    [isShow]="studentsCardsState.isShowStudentsCards"
+></sr-student-cards-container>

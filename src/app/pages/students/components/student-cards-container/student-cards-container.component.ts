@@ -1,12 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 
-import { MOCK_STUDENTS } from '../../../../mock-data/students';
+import { IStudent } from 'src/app/dto';
 
 @Component({
     selector: 'sr-student-cards-container',
     templateUrl: './student-cards-container.component.html',
     styleUrls: ['./student-cards-container.component.scss'],
+    changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class StudentCardsContainerComponent {
-    public students = MOCK_STUDENTS;
+    @Input() students: IStudent[];
+    @Input() isLoading: boolean;
+    @Input() isShow: boolean; // seems it is not necessary field
 }

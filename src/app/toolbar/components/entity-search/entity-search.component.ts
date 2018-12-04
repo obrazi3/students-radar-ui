@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter, ViewChild, ElementRef, OnInit, OnDestroy } from '@angular/core';
+import { Component, Output, EventEmitter, ViewChild, ElementRef, OnInit, OnDestroy, Input } from '@angular/core';
 import { fromEvent, Subscription } from 'rxjs';
 import { pluck, debounceTime, filter } from 'rxjs/operators';
 
@@ -9,6 +9,8 @@ import { pluck, debounceTime, filter } from 'rxjs/operators';
 })
 export class EntitySearchComponent implements OnInit, OnDestroy {
     @ViewChild('input') input: ElementRef;
+
+    @Input() placeholder: string;
 
     @Output() close = new EventEmitter<null>();
     @Output() change = new EventEmitter<string>();

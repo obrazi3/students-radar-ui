@@ -1,10 +1,12 @@
 <div class="toolbar">
     <sr-entity-serach
+        [placeholder]="entitySearchPlaceholder"
         (close)="onInputClear()"
         (change)="onSearchInputChange($event)"
     ></sr-entity-serach>
     <sr-entity-search-results
         *ngIf="isShowSearchResults"
+        [entitiesResultTitle]="entitiesResultTitle"
         [entities]="entities"
         [isLoading]="isLoadingSearchResults"
     ></sr-entity-search-results>

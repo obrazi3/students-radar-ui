@@ -1,4 +1,4 @@
-import { Component, Input, ChangeDetectionStrategy, Output, EventEmitter } from '@angular/core';
+import { Component, Input, ChangeDetectionStrategy, Output, EventEmitter, SimpleChanges, OnInit } from '@angular/core';
 
 import { EntityType, SearchableEntities } from '../dto';
 
@@ -8,7 +8,7 @@ import { EntityType, SearchableEntities } from '../dto';
     styleUrls: ['./toolbar.component.scss'],
     changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ToolbarComponent {
+export class ToolbarComponent implements OnInit {
     @Input() entityType: EntityType;
     @Input() isLoadingSearchResults;
     @Input() isShowSearchResults;
@@ -16,6 +16,18 @@ export class ToolbarComponent {
 
     @Output() closeEntitiesResultsWindow = new EventEmitter<void>();
     @Output() entitiesSearchRequest = new EventEmitter<string>();
+
+    public entitiesResultTitle = 'Results';
+    public entitySearchPlaceholder = 'Search';
+
+    ngOnInit() {
+        switch (this.entityType) {
+            case EntityType.Students:
+                this.entitiesResultTitle = 'Students';
+                this.entitySearchPlaceholder = 'Search students';
+                break;
+        }
+    }
 
     public onInputClear() {
         this.closeEntitiesResultsWindow.emit();

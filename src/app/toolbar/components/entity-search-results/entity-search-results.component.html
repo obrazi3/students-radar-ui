@@ -1,8 +1,14 @@
 <div class="results-header">
-    <span class="entity-type">Students</span>
+    <span class="entity-type">{{ entitiesResultTitle }}</span>
     <span class="counts">{{ entities.length }} matches</span>
 </div>
-<sr-entity-search-result
-    *ngFor="let entity of entities"
-    [entity]="entity"
-></sr-entity-search-result>
+<ng-container *ngIf="!isLoading && entities.length">
+    <sr-entity-search-result
+        *ngFor="let entity of entities"
+        [entity]="entity"
+    ></sr-entity-search-result>
+</ng-container>
+<sr-loading-spinner
+    *ngIf="isLoading"
+    [show]="true"
+></sr-loading-spinner>
